@@ -204,7 +204,7 @@ void UpdateFromPairs(const vector<string>& lines, const int lc, const int iter,
         for (unsigned i = 1; i <= src.size(); ++i) {
           const double p = probs[i] / sum;
           s2t->Increment(src[i - 1], f_j, p);
-          emp_feat_ += DiagonalAlignment::Feature(j, i, trg.size(), src.size()) * p;
+          emp_feat_ += DiagonalAlignment::Feature(j + 1, i, trg.size(), src.size()) * p;
         }
       }
       local_likelihood += log(sum);
