@@ -24,6 +24,8 @@
 #include "src/hashtables.h"
 #include "src/corpus.h"
 
+namespace FastAlign {
+
 struct Md {
   static double digamma(double x) {
     double result = 0, xx, xx2, xx4;
@@ -172,7 +174,10 @@ class TTable {
   bool probs_initialized_; // If we can use the values in probs
 
  public:
-  void DeserializeLogProbsFromText(std::istream* in, Dict& d);
+  /// \return #read > 0 on success, 0 on failure or empty input
+  unsigned DeserializeLogProbsFromText(std::istream* in, Dict& d, std::ostream *log = &std::cerr);
 };
+
+}
 
 #endif

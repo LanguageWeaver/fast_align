@@ -10,6 +10,8 @@
 #include "src/hashtables.h"
 #include "src/port.h"
 
+namespace FastAlign {
+
 class Dict {
  public:
   Dict() : b0_("<bad0>") {
@@ -70,5 +72,7 @@ class Dict {
   std::vector<std::string> words_;
   MAP_TYPE d_;
 };
+
+}
 
 #endif
