@@ -2,6 +2,8 @@
 
 using namespace std;
 
+namespace FastAlign {
+
 static bool is_digit(char x) { return x >= '0' && x <= '9'; }
 
 std::shared_ptr<Array2D<bool> > AlignmentIO::ReadPharaohAlignmentGrid(const string& al) {
@@ -95,3 +97,4 @@ void AlignmentIO::SerializeTypedAlignment(const Array2D<AlignmentType>& alignmen
   out << endl;
 }
 
+}

@@ -6,6 +6,8 @@
 #include <memory>
 #include "array2d.h"
 
+namespace FastAlign {
+
 struct AlignmentIO {
   enum AlignmentType { kNONE = 0, kTRANSLATION = 1, kTRANSLITERATION = 2 };
 
@@ -36,6 +38,8 @@ inline std::ostream& operator<<(std::ostream& os, const Array2D<AlignmentIO::Ali
     os << (j%10);
   os << "\n";
   return os;
+}
+
 }
 
 

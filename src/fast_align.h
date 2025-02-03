@@ -145,6 +145,8 @@ inline double AlignedLogProb(AlignContext const& ctx, unsigned const* src, unsig
   return log_prob;
 }
 
+
+
 /// print in-sentence pairs ||| alignments to out. \return total logprob (or HUGE_VAL if error)
 double Align(AlignContext const& ctx, std::istream& in, std::ostream& out);
 
