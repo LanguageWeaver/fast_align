@@ -3,7 +3,7 @@
 #pragma once
 
 #ifdef HAVE_SPARSEHASH
-#include <google/sparse_hash_map>
+#include <sparsehash/sparse_hash_map>
 namespace FastAlign {
 typedef google::sparse_hash_map<std::string, unsigned, std::hash<std::string> > MAP_TYPE;
 typedef google::sparse_hash_map<unsigned, double> Word2Double;
