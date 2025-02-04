@@ -1,11 +1,13 @@
-#ifndef ARRAY2D_H_
-#define ARRAY2D_H_
+#ifndef FAST_ALIGN__ARRAY2D_H_
+#define FAST_ALIGN__ARRAY2D_H_
 
 #include <iostream>
 #include <algorithm>
 #include <cassert>
 #include <vector>
 #include <string>
+
+namespace FastAlign {
 
 template<typename T>
 class Array2D {
@@ -168,5 +170,6 @@ inline std::ostream& operator<<(std::ostream& os, const Array2D<std::vector<bool
   return os;
 }
 
-#endif
+}
 
+#endif

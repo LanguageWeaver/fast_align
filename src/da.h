@@ -12,11 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#ifndef _DA_H_
-#define _DA_H_
+#ifndef FAST_ALIGN__DA_H_
+#define FAST_ALIGN__DA_H_
 
 #include <cmath>
 #include <cassert>
+
+namespace FastAlign {
 
 // m = trg len
 // n = src len
@@ -89,5 +91,7 @@ struct DiagonalAlignment {
     return (a_n * g_np1 - x_1) / rm1 - d*(g_np1 - g_2) / (rm1 * rm1);
   }
 };
+
+}
 
 #endif

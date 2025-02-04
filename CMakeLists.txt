@@ -15,7 +15,7 @@ if (OPENMP_FOUND)
   set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 endif(OPENMP_FOUND)
 
-add_library(fastalign src/fast_align.cc src/ttables.cc src/atools.cc)
+add_library(fastalign STATIC src/fast_align.cc src/ttables.cc src/atools.cc)
 add_executable(fast_align src/fast_align_main.cc)
 target_link_libraries(fast_align fastalign)
 add_executable(atools src/atools_main.cc src/alignment_io.cc)

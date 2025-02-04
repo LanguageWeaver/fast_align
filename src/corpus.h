@@ -1,5 +1,6 @@
-#ifndef CPYPDICT_H_
-#define CPYPDICT_H_
+#ifndef FAST_ALIGN__CPYPDICT_H_
+#define FAST_ALIGN__CPYPDICT_H_
+#pragma once
 
 #include <string>
 #include <iostream>

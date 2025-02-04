@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef FAST_ALIGN_PORT_H_
-#define FAST_ALIGN_PORT_H_
+#ifndef FAST_ALIGN__PORT_H_
+#define FAST_ALIGN__PORT_H_
+#pragma once
 
 // As of OS X 10.9, it looks like C++ TR1 headers are removed from the
 // search paths. Instead, we can include C++11 headers.

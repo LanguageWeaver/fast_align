@@ -1,10 +1,11 @@
-#ifndef ALIGNMENT_IO_H_
-#define ALIGNMENT_IO_H_
+#ifndef FAST_ALIGN__ALIGNMENT_IO_H_
+#define FAST_ALIGN__ALIGNMENT_IO_H_
+#pragma once
 
 #include <string>
 #include <iostream>
 #include <memory>
-#include "array2d.h"
+#include "src/array2d.h"
 
 namespace FastAlign {
 

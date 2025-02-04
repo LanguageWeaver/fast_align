@@ -1,4 +1,8 @@
-#include "array2d.h"
+#ifndef FAST_ALIGN__COMBINE_ALIGN_H
+#define FAST_ALIGN__COMBINE_ALIGN_H
+#pragma once
+
+#include "src/array2d.h"
 
 namespace FastAlign {
 
@@ -43,3 +47,5 @@ inline AlignMatrix combine(CombineAlignment c, unsigned const* a, unsigned na, u
 
 
 }  // namespace FastAlign
+
+#endif

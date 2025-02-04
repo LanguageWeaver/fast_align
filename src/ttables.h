@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#ifndef _TTABLES_H_
-#define _TTABLES_H_
+#ifndef FAST_ALIGN__TTABLES_H_
+#define FAST_ALIGN__TTABLES_H_
+#pragma once
 
 #include <cassert>
 #include <cmath>

@@ -8,12 +8,13 @@
 #include <set>
 #include <getopt.h>
 
-#include "alignment_io.h"
-#include "atools.h"
-#include "combine_align.h"
+#include "src/alignment_io.h"
+#include "src/atools.h"
+#include "src/combine_align.h"
+
+namespace FastAlign {
 
 using namespace std;
-namespace FastAlign {
 
 static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
                                    {"input_2", required_argument, 0, 'j'},

@@ -1,3 +1,7 @@
+#ifndef FAST_ALIGN__FAST_ALIGN_H_
+#define FAST_ALIGN__FAST_ALIGN_H_
+#pragma once
+
 #include <iostream>
 #include <string>
 
@@ -146,7 +150,6 @@ inline double AlignedLogProb(AlignContext const& ctx, unsigned const* src, unsig
 }
 
 
-
 /// print in-sentence pairs ||| alignments to out. \return total logprob (or HUGE_VAL if error)
 double Align(AlignContext const& ctx, std::istream& in, std::ostream& out);
 
@@ -154,3 +157,5 @@ double Align(AlignContext const& ctx, std::istream& in, std::ostream& out);
 int Run(TrainModelOpt& opt);
 
 }  // namespace FastAlign
+
+#endif

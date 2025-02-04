@@ -1,3 +1,7 @@
+#ifndef FAST_ALIGN__ATOOLS_H_
+#define FAST_ALIGN__ATOOLS_H_
+#pragma once
+
 #include <string>
 #include <iostream>
 
@@ -17,3 +21,5 @@ void AtoolsUsage(std::ostream &o = std::cerr, char const* exename="atools");
 int Run(AtoolsOpt const& opt);
 
 }  // namespace FastAlign
+
+#endif
