@@ -58,12 +58,12 @@ class Array2D {
   iterator end() { return data_.end(); }
   const_iterator end() const { return data_.end(); }
   const Array2D<T>& operator*=(const T& x) {
-    std::transform(data_.begin(), data_.end(), data_.begin(),
-        std::bind2nd(std::multiplies<T>(), x));
+    for (iterator i = data_.begin(), e = data_.end(); i != e; ++i)
+      *i *= x;
   }
   const Array2D<T>& operator/=(const T& x) {
-    std::transform(data_.begin(), data_.end(), data_.begin(),
-        std::bind2nd(std::divides<T>(), x));
+    for (iterator i = data_.begin(), e = data_.end(); i != e; ++i)
+      *i /= x;
   }
   const Array2D<T>& operator+=(const Array2D<T>& m) {
     std::transform(m.data_.begin(), m.data_.end(), data_.begin(), data_.begin(), std::plus<T>());
