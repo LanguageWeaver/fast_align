@@ -19,7 +19,9 @@
 #include <iostream>
 #include <sstream>
 #include <utility>
+#ifndef _MSC_VER
 #include <getopt.h>
+#endif
 
 #include "src/corpus.h"
 #include "src/da.h"
@@ -54,7 +56,11 @@ void ParseLine(Dict& d, const string& line, vector<unsigned>* src, vector<unsign
 }
 
 
+//TODO: could include a getopt.h impl from posix
 bool InitCommandLine(TrainModelOpt& opt, int argc, char** argv) {
+#ifdef _MSC_VER
+  return false;
+#else
   struct option options[] = {{"input", required_argument, 0, 'i'},
                              {"reverse", no_argument, &opt.is_reverse, 1},
                              {"iterations", required_argument, 0, 'I'},
@@ -107,6 +113,7 @@ bool InitCommandLine(TrainModelOpt& opt, int argc, char** argv) {
   }
   if (opt.input.size() == 0) return false;
   return true;
+#endif
 }
 
 void UpdateFromPairs(TrainModelOpt& opt, const vector<string>& lines, const int lc, const int iter,

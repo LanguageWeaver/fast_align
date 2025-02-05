@@ -6,7 +6,9 @@
 #include <map>
 #include <queue>
 #include <set>
+#ifdef _MSC_VER
 #include <getopt.h>
+#endif
 
 #include "src/alignment_io.h"
 #include "src/atools.h"
@@ -16,13 +18,16 @@ namespace FastAlign {
 
 using namespace std;
 
+
+
+bool InitCommandLine(AtoolsOpt& opt, int argc, char** argv) {
+#ifdef _MSC_VER
+  return false;
+#else
 static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
                                    {"input_2", required_argument, 0, 'j'},
                                    {"command", required_argument, 0, 'c'},
                                    {0, 0, 0, 0}};
-
-
-bool InitCommandLine(AtoolsOpt& opt, int argc, char** argv) {
   while (1) {
     int oi;
     int c = getopt_long(argc, argv, "i:j:c:", aoptions, &oi);
@@ -31,13 +36,11 @@ bool InitCommandLine(AtoolsOpt& opt, int argc, char** argv) {
       case 'i': opt.input_1 = optarg; break;
       case 'j': opt.input_2 = optarg; break;
       case 'c': opt.command = optarg; break;
-      default: goto usage;
+      default: return false;
     }
   }
   if (opt.input_1.size() && opt.command.size()) return true;
-usage:
-
-  return false;
+#endif
 }
 
 struct Command {
