@@ -19,7 +19,7 @@
 #include <iostream>
 #include <sstream>
 #include <utility>
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || defined(HAVE_GETOPT)
 #include <getopt.h>
 #endif
 
@@ -58,7 +58,7 @@ void ParseLine(Dict& d, const string& line, vector<unsigned>* src, vector<unsign
 
 //TODO: could include a getopt.h impl from posix
 bool InitCommandLine(TrainModelOpt& opt, int argc, char** argv) {
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(HAVE_GETOPT)
   return false;
 #else
   struct option options[] = {{"input", required_argument, 0, 'i'},

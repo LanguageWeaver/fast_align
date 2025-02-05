@@ -6,8 +6,9 @@
 #include <map>
 #include <queue>
 #include <set>
-#ifdef _MSC_VER
+#if !defined(_MSC_VER) || defined(HAVE_GETOPT)
 #include <getopt.h>
+#endif
 #endif
 
 #include "src/alignment_io.h"
@@ -19,9 +20,8 @@ namespace FastAlign {
 using namespace std;
 
 
-
 bool InitCommandLine(AtoolsOpt& opt, int argc, char** argv) {
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(HAVE_GETOPT)
   return false;
 #else
 static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
