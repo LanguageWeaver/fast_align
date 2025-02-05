@@ -9,7 +9,6 @@
 #if !defined(_MSC_VER) || defined(HAVE_GETOPT)
 #include <getopt.h>
 #endif
-#endif
 
 #include "src/alignment_io.h"
 #include "src/atools.h"
@@ -39,7 +38,7 @@ static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
       default: return false;
     }
   }
-  if (opt.input_1.size() && opt.command.size()) return true;
+  return opt.input_1.size() && opt.command.size();
 #endif
 }
 
