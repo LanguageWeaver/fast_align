@@ -45,6 +45,8 @@ inline AlignMatrix combine(CombineAlignment c, unsigned const* a, unsigned na, u
   return combine(c, alignMatrix(a, na, nb), alignMatrixInvert(b, nb, na));
 }
 
+/// \return space sep string of i-j alignments for all aligned[i][j]
+std::string alignText(AlignMatrix const&);
 
 }  // namespace FastAlign
 

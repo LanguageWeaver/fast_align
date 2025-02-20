@@ -23,10 +23,10 @@ bool InitCommandLine(AtoolsOpt& opt, int argc, char** argv) {
 #if defined(_MSC_VER) && !defined(HAVE_GETOPT)
   return false;
 #else
-static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
-                                   {"input_2", required_argument, 0, 'j'},
-                                   {"command", required_argument, 0, 'c'},
-                                   {0, 0, 0, 0}};
+  static struct option aoptions[] = {{"input_1", required_argument, 0, 'i'},
+                                     {"input_2", required_argument, 0, 'j'},
+                                     {"command", required_argument, 0, 'c'},
+                                     {0, 0, 0, 0}};
   while (1) {
     int oi;
     int c = getopt_long(argc, argv, "i:j:c:", aoptions, &oi);
@@ -308,6 +308,22 @@ AlignMatrix combine(CombineAlignment c, AlignMatrix const& a, AlignMatrix const&
   return r;
 }
 
+std::string alignText(AlignMatrix const& alignment) {
+  std::string r;
+  bool need_space = false;
+  for (unsigned i = 0; i < alignment.width(); ++i)
+    for (unsigned j = 0; j < alignment.height(); ++j)
+      if (alignment(i, j)) {
+        if (need_space)
+          r.push_back(' ');
+        else
+          need_space = true;
+        r += std::to_string(i);
+        r.push_back('-');
+        r += std::to_string(j);
+      }
+  return r;
+}
 
 typedef map<string, shared_ptr<Command>> CommandMap;
 
