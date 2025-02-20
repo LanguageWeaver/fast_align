@@ -22,8 +22,8 @@
 #include <iostream>
 #include <vector>
 
-#include "src/hashtables.h"
-#include "src/corpus.h"
+#include "hashtables.h"
+#include "corpus.h"
 
 namespace FastAlign {
 

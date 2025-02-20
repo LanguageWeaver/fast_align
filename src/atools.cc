@@ -10,9 +10,9 @@
 #include <getopt.h>
 #endif
 
-#include "src/alignment_io.h"
-#include "src/atools.h"
-#include "src/combine_align.h"
+#include "alignment_io.h"
+#include "atools.h"
+#include "combine_align.h"
 
 namespace FastAlign {
 

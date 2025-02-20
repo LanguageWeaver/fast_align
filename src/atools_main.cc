@@ -1,4 +1,4 @@
-#include "src/atools.h"
+#include "atools.h"
 
 int main(int argc, char** argv) {
   FastAlign::AtoolsOpt opt;

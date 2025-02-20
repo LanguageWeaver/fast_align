@@ -5,9 +5,9 @@
 #include <iostream>
 #include <string>
 
-#include "src/corpus.h"
-#include "src/da.h"
-#include "src/ttables.h"
+#include "corpus.h"
+#include "da.h"
+#include "ttables.h"
 
 namespace FastAlign {
 

@@ -2,7 +2,7 @@
 #define FAST_ALIGN__COMBINE_ALIGN_H
 #pragma once
 
-#include "src/array2d.h"
+#include "array2d.h"
 
 namespace FastAlign {
 

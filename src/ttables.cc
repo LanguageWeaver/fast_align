@@ -1,10 +1,10 @@
-#include "src/ttables.h"
+#include "ttables.h"
 
 #include <cmath>
 #include <fstream>
 #include <string>
 
-#include "src/corpus.h"
+#include "corpus.h"
 
 namespace FastAlign {
 

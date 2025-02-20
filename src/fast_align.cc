@@ -23,10 +23,10 @@
 #include <getopt.h>
 #endif
 
-#include "src/corpus.h"
-#include "src/da.h"
-#include "src/fast_align.h"
-#include "src/ttables.h"
+#include "corpus.h"
+#include "da.h"
+#include "fast_align.h"
+#include "ttables.h"
 
 
 namespace FastAlign {

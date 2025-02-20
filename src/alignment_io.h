@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "src/array2d.h"
+#include "array2d.h"
 
 namespace FastAlign {
 

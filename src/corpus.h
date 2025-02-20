@@ -8,8 +8,8 @@
 #include <fstream>
 #include <vector>
 #include <set>
-#include "src/hashtables.h"
-#include "src/port.h"
+#include "hashtables.h"
+#include "port.h"
 
 namespace FastAlign {
 

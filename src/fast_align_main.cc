@@ -1,4 +1,4 @@
-#include "src/fast_align.h"
+#include "fast_align.h"
 
 int main(int argc, char** argv) {
   FastAlign::TrainModelOpt opt;

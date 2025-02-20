@@ -1,4 +1,4 @@
-#include "src/alignment_io.h"
+#include "alignment_io.h"
 
 using namespace std;
 
