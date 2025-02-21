@@ -41,8 +41,11 @@ inline AlignMatrix alignMatrix(unsigned const* a, unsigned na, unsigned nb, bool
   return invert ? alignMatrixInvert(a, na, nb) : alignMatrix(a, na, nb);
 }
 
+/// \pre unsigned a[na], b[nb] are 1:[0,1] alignments are index+1 if aligned, 0 if not.
+/// b is the reverse (src index for trg) alignment
+/// \return combined many:many alignment
 inline AlignMatrix combine(CombineAlignment c, unsigned const* a, unsigned na, unsigned const* b, unsigned nb) {
-  return combine(c, alignMatrix(a, na, nb), alignMatrixInvert(b, nb, na));
+  return combine(c, alignMatrix(a, na, nb), alignMatrixInvert(b, na, nb));
 }
 
 /// \return space sep string of i-j alignments for all aligned[i][j]
