@@ -30,7 +30,7 @@ inline AlignMatrix alignMatrix(unsigned const* a, unsigned na, unsigned nb) {
 }
 
 inline AlignMatrix alignMatrixInvert(unsigned const* b, unsigned na, unsigned nb) {
-  AlignMatrix m(nb, na);
+  AlignMatrix m(na, nb);
   for (unsigned i = 0; i != nb; ++i)
     if (b[i]) m(b[i] - 1, i) = 1;
   return m;
